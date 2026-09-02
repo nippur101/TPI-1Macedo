@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/data.js"></script>
+    <script type="module" src="js/render.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Biblioteca</h1>
+    </header>
+
+    <main>
+
+        
+        <section class="busqueda">
+
+            <h2>Buscar libros</h2>
+
+            <div class="filtros">
+
+                <input
+                    type="text"
+                    id="busqueda"
+                    placeholder="Buscar por título o autor..."
+                >
+
+                <select id="filtroGenero">
+                    <option value="Todos">Todos los géneros</option>
+                    <option value="Novela">Novela</option>
+                    <option value="Fantasía">Fantasía</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Aventura">Aventura</option>
+                </select>
+
+                <label class="favoritos">
+                    <input type="checkbox" id="soloFavoritos">
+                    Solo favoritos
+                </label>
+
+            </div>
+
+        </section>
+
+        <section class="agregar">
+
+            <h2>Agregar libro</h2>
+
+            <form id="formLibro">
+
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Título"
+                >
+
+                <input
+                    type="text"
+                    id="autor"
+                    placeholder="Autor"
+                >
+
+                <select id="genero">
+
+                    <option value="">Seleccionar género</option>
+                    <option value="Novela">Novela</option>
+                    <option value="Fantasía">Fantasía</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Aventura">Aventura</option>
+
+                </select>
+
+                <input
+                    type="number"
+                    id="año"
+                    placeholder="Año"
+                >
+
+                <button type="submit">
+                    Agregar libro
+                </button>
+
+            </form>
+
+            <p id="mensaje"></p>
+
+        </section>
+
+        <section class="resultados">
+
+            <h2>Resultados</h2>
+
+            <div id="listaLibros" class="lista-libros">
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
